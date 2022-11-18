@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "blog_categories",
+  "info": {
+    "name": "blog-category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "blogs": {
+      "via": "blog_categories",
+      "collection": "blog"
+    }
+  }
+}

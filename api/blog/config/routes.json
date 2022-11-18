@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/blogs",
+      "handler": "blog.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/elements/blogs",
+      "handler": "blog.findElementsBlogs",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/single/:slug",
+      "handler": "blog.findBySlug",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blogs/:type",
+      "handler": "blog.findByPage",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blogs/count",
+      "handler": "blog.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/blogs/:id",
+      "handler": "blog.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/blogs",
+      "handler": "blog.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/blogs/:id",
+      "handler": "blog.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/blogs/:id",
+      "handler": "blog.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

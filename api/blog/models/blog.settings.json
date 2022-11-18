@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "name": "blog"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "author": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "integer",
+      "default": 0
+    },
+    "blog_categories": {
+      "collection": "blog-categories",
+      "via": "blogs",
+      "dominant": true
+    },
+    "content": {
+      "type": "text"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "type": {
+      "type": "string"
+    },
+    "demo": {
+      "type": "string"
+    },
+    "page": {
+      "type": "string"
+    }
+  }
+}
